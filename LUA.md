@@ -1,4 +1,4 @@
-# Mori Lua API Documentation
+# Jato Lua API Documentation
 
 **Version**: 2.1.0
 
@@ -615,7 +615,7 @@ Accessed via `webhook.embed1` or `webhook.embed2`.
 
 ```lua
 local wh = Webhook.new("https://discord.com/api/webhooks/...")
-wh.content = "Hello from Mori!"
+wh.content = "Hello from Jato!"
 wh.embed1.use = true
 wh.embed1.title = "Status"
 wh.embed1.description = "Bot is running in " .. getWorld().name

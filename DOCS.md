@@ -1,4 +1,4 @@
-# Mori API & WebSocket Documentation
+# Jato API & WebSocket Documentation
 
 **Version**: 2.0.0
 **Base URL**: `http://localhost:3000`

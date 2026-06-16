@@ -70,9 +70,9 @@ class EventBus {
   }
 }
 
-// ── MoriWebSocket singleton ────────────────────────────────────────────────
+// ── JatoWebSocket singleton ────────────────────────────────────────────────
 
-class MoriWebSocket {
+class JatoWebSocket {
   readonly bus = new EventBus()
   private ws: WebSocket | null = null
   private retryTimer: ReturnType<typeof setTimeout> | null = null
@@ -113,4 +113,4 @@ class MoriWebSocket {
   }
 }
 
-export const moriWs = new MoriWebSocket()
+export const JatoWs = new JatoWebSocket()

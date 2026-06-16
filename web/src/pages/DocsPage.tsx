@@ -93,7 +93,7 @@ export function DocsPage() {
               </div>
               <div className="space-y-2">
                 <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-                  Mori scripting reference
+                  Jato scripting reference
                 </h1>
                 <p className="max-w-3xl text-sm leading-6 text-muted-foreground">
                   Search the current Lua contract, browse object models, and inspect examples

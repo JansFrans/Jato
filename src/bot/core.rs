@@ -1,4 +1,4 @@
-use crate::astar::{self, find_path};
+use crate::astar::{self};
 use crate::bot_state::{
     BotCommand, BotDelays, BotState, BotStatus, CmdReceiver, InvSlot, PlayerInfo, TileInfo,
     WorldObjectInfo,

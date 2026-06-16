@@ -1,4 +1,4 @@
-const TOKEN_KEY = 'mori_token'
+const TOKEN_KEY = 'Jato_token'
 
 export const authStore = {
   getToken(): string | null {

@@ -1,6 +1,6 @@
 import { atom, useAtom, useAtomValue, useSetAtom } from 'jotai'
 import { useEffect } from 'react'
-import { moriWs, type TileData } from './ws'
+import { JatoWs, type TileData } from './ws'
 import type { BotStatus, BotSummary, InventoryItem, Player, WorldObject, ItemRecord } from './api'
 import { api } from './api'
 
@@ -79,13 +79,13 @@ function patchBot(
   return new Map(map).set(id, { ...bot, ...patch })
 }
 
-export function useMoriStore() {
+export function useJatoStore() {
   const setBots = useSetAtom(botsAtom)
   const setItemNames = useSetAtom(itemNamesAtom)
   const setItemColors = useSetAtom(itemColorsAtom)
 
   useEffect(() => {
-    moriWs.connect()
+    JatoWs.connect()
 
     api.getBots().then((list: BotSummary[]) => {
       const map = new Map<number, LiveBot>()
@@ -208,11 +208,11 @@ export function useMoriStore() {
     ]
 
     for (const [event, handler] of handlers) {
-      moriWs.bus.on(event as never, handler as never)
+      JatoWs.bus.on(event as never, handler as never)
     }
     return () => {
       for (const [event, handler] of handlers) {
-        moriWs.bus.off(event as never, handler as never)
+        JatoWs.bus.off(event as never, handler as never)
       }
     }
   }, [setBots, setItemNames])

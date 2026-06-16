@@ -43,7 +43,7 @@ where
     F: Fn(&Lua, usize) -> LuaResult<LuaValue> + Clone + 'static,
 {
     let table = lua.create_table()?;
-    table.raw_set("__mori_sequence", true)?;
+    table.raw_set("__Jato_sequence", true)?;
 
     let metatable = lua.create_table()?;
 
@@ -1325,7 +1325,7 @@ local __builtin_ipairs = ipairs
 local __builtin_pairs = pairs
 
 function ipairs(t)
-    if type(t) == "table" and rawget(t, "__mori_sequence") then
+    if type(t) == "table" and rawget(t, "__Jato_sequence") then
         local function iter(seq, i)
             i = i + 1
             local item = seq[i]
@@ -1339,7 +1339,7 @@ function ipairs(t)
 end
 
 function pairs(t)
-    if type(t) == "table" and rawget(t, "__mori_sequence") then
+    if type(t) == "table" and rawget(t, "__Jato_sequence") then
         local function iter(seq, i)
             i = i + 1
             local item = seq[i]

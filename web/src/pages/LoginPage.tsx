@@ -40,7 +40,7 @@ export function LoginPage({ onDone }: Props) {
           <LogIn className="auth-icon-svg" />
         </div>
 
-        <h1 className="auth-title">Mori<span className="text-primary">.</span></h1>
+        <h1 className="auth-title">Jato<span className="text-primary">.</span></h1>
         <p className="auth-subtitle">Enter your password to continue.</p>
 
         <form onSubmit={handleSubmit} className="auth-form">

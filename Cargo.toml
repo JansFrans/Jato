@@ -1,8 +1,8 @@
 [package]
-name = "Mori"
+name = "Jato"
 version = "2.0.1"
 edition = "2024"
-authors = ["Cendy"]
+authors = ["Jans"]
 
 [dependencies]
 bitflags = "2"

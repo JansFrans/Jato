@@ -18,7 +18,7 @@ async function req<T>(
   });
   if (res.status === 401) {
     authStore.clearToken();
-    window.dispatchEvent(new CustomEvent("mori:unauthorized"));
+    window.dispatchEvent(new CustomEvent("Jato:unauthorized"));
     throw new Error("Unauthorized");
   }
   if (res.status === 204) return undefined as T;

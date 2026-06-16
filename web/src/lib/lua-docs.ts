@@ -531,7 +531,7 @@ print("Hits to break: " .. info.strength)`,
       },
     ],
     example: `local wh = Webhook.new("https://discord.com/api/webhooks/...")
-wh.content = "Hello from Mori!"
+wh.content = "Hello from Jato!"
 wh.embed1.use = true
 wh.embed1.title = "Status"
 wh.embed1.description = "Bot is running in " .. getWorld().name

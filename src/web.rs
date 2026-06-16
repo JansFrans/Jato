@@ -13,7 +13,7 @@ use tower_http::cors::{Any, CorsLayer};
 use tower_http::services::{ServeDir, ServeFile};
 use serde::Deserialize;
 use std::sync::{Arc, Mutex};
-use std::net::{ToSocketAddrs, SocketAddr};
+use std::net::ToSocketAddrs;
 
 use crate::auth::AuthState;
 use crate::bot::Socks5Config;
@@ -465,7 +465,7 @@ async fn index_html() -> impl IntoResponse {
 
     let injected = html.replace(
         "</body>",
-        r#"<div style="position:fixed;bottom:8px;right:12px;font-size:10px;opacity:0.35;color:#fff;pointer-events:none;z-index:9999;font-family:sans-serif;">Mori created with &#x2764;&#xfe0e; by Cendy</div></body>"#,
+        r#"<div style="position:fixed;bottom:8px;right:12px;font-size:10px;opacity:0.35;color:#fff;pointer-events:none;z-index:9999;font-family:sans-serif;">Jato created with &#x2764;&#xfe0e; by Jans</div></body>"#,
     );
 
     axum::response::Html(injected)

@@ -58,7 +58,7 @@ export function SetupPage({ onDone }: Props) {
           <ShieldCheck className="auth-icon-svg" />
         </div>
 
-        <h1 className="auth-title">Welcome to Mori</h1>
+        <h1 className="auth-title">Welcome to Jato</h1>
         <p className="auth-subtitle">
           Set up a password to protect your dashboard. You can only do this once.
         </p>

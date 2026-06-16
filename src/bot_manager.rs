@@ -115,7 +115,7 @@ impl BotManager {
         let uname       = username.clone();
         let pass        = password.clone();
 
-        // 1. Simpan konfigurasi ke memori
+        // 1. Simpan konfigurasi ke meJato
         let saved_config = SavedBot {
             is_ltoken: false,
             username: username.clone(),

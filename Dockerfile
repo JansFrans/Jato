@@ -48,8 +48,8 @@ RUN rm -rf src
 COPY src ./src
 RUN touch src/main.rs && \
     xx-cargo build --release && \
-    cp target/$(xx-cargo --print-target-triple)/release/Mori /app/Mori && \
-    xx-verify /app/Mori
+    cp target/$(xx-cargo --print-target-triple)/release/Jato /app/Jato && \
+    xx-verify /app/Jato
 
 # Runtime stage
 FROM debian:bookworm-slim
@@ -61,10 +61,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY --from=builder /app/Mori ./Mori
+COPY --from=builder /app/Jato ./Jato
 COPY --from=web-builder /app/dist ./dist
 COPY items.dat ./items.dat
 
 EXPOSE 3000
 
-CMD ["./Mori"]
+CMD ["./Jato"]

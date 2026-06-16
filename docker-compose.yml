@@ -1,8 +1,8 @@
 services:
-  mori:
+  Jato:
     build: .
     volumes:
-      - mori-data:/app/data
+      - Jato-data:/app/data
 
 volumes:
-  mori-data:
+  Jato-data:

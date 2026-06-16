@@ -36,8 +36,8 @@ export default function App() {
     const onUnauthorized = () => {
       setAuthState('login')
     }
-    window.addEventListener('mori:unauthorized', onUnauthorized)
-    return () => window.removeEventListener('mori:unauthorized', onUnauthorized)
+    window.addEventListener('Jato:unauthorized', onUnauthorized)
+    return () => window.removeEventListener('Jato:unauthorized', onUnauthorized)
   }, [])
 
   async function handleLogout() {
@@ -66,7 +66,7 @@ export default function App() {
     <div className="h-full flex flex-col antialiased text-sm">
       <header className="shrink-0 h-10 flex items-center justify-between px-4 bg-card border-b border-border">
         <span className="font-bold tracking-wide text-foreground text-xs">
-          Mori<span className="text-primary">.</span>
+          Jato<span className="text-primary">.</span>
         </span>
         <nav className="flex gap-0.5">
           <NavBtn active={page === 'bots'} onClick={() => setPage('bots')} icon={<Bot className="w-3 h-3" />} label="Bots" />
