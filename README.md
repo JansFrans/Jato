@@ -1,238 +1,109 @@
-````markdown
+<br />
 <div align="center">
+  <a href="https://github.com/JansFrans/Jato">
+    <img src="stuff/hero.png" alt="Jato Banner" width="100%">
+  </a>
 
-<img src="stuff/hero.png" width="100%" alt="Jato Banner">
+  <h1 align="center">Jato</h1>
 
-# Jato
+  <p align="center">
+    <strong>A Modern, Cross-Platform Growtopia Automation Framework</strong>
+    <br />
+    <br />
+    <a href="https://discord.gg/a6FqT4G3dR">Discord</a>
+    ·
+    <a href="https://github.com/JansFrans/Jato/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/JansFrans/Jato/issues">Request Feature</a>
+  </p>
+</div>
 
-### Cross-Platform Growtopia Automation Framework
-
-A modern Growtopia companion built with **Rust**, designed to run on multiple operating systems while providing an intuitive web-based control panel.
-
-[![License](https://img.shields.io/badge/License-CC--BY--NC--SA--4.0-blue?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Rust](https://img.shields.io/badge/Built%20With-Rust-orange?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-success?style=for-the-badge)]
-
-### Repository
-
-https://github.com/JansFrans/Jato
-
+<div align="center">
+  <a href="https://github.com/JansFrans/Jato/stargazers"><img src="https://img.shields.io/github/stars/JansFrans/Jato?style=for-the-badge&color=yellow" alt="Stars" /></a>
+  <a href="https://www.rust-lang.org/"><img src="https://img.shields.io/badge/Built%20With-Rust-E34F26?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" /></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/UI-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" /></a>
+  <a href="https://github.com/JansFrans/Jato"><img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-2EA44F?style=for-the-badge" alt="Platform" /></a>
+  <a href="https://discord.gg/a6FqT4G3dR"><img src="https://img.shields.io/discord/1281530222612709417?style=for-the-badge&color=5865F2&logo=discord&logoColor=white&label=discord" alt="Discord" /></a>
 </div>
 
 ---
 
-# 📖 Overview
+## 📖 About The Project
 
-Jato is an open-source Growtopia automation framework written in **Rust**.
+**Jato** is an open-source Growtopia automation framework entirely written in **Rust**. 
 
-Unlike traditional Growtopia bots that depend on native desktop interfaces, Jato exposes a lightweight web dashboard that allows you to manage bots directly from any modern browser.
+Unlike traditional companion bots that depend on native Windows desktop interfaces, Jato operates purely via a lightweight local web dashboard. This allows you to monitor, control, and script multiple bots directly from any modern browser on any operating system, eliminating platform lock-in.
 
-The project focuses on:
-
-- Cross-platform compatibility
-- High performance
-- Lightweight architecture
-- Multi-bot management
-- Extensible scripting system
-- Modern web interface
+> Star this project if you're following along — any contribution helps a lot!
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-## 🌐 Web Dashboard
+### 🌐 Interface
+| | Feature | Description |
+|---|---|---|
+| ✅ | Web GUI | Control and monitor bots from any browser |
+| ✅ | World map preview | Live tile map of the current world |
+| ✅ | World map with textures | Textured world map rendering |
+| ✅ | Bot terminal view | Real-time bot log output |
+| ✅ | Item image preview | Item icons in the database |
 
-- Browser-based interface
-- Live bot monitoring
-- World visualization
-- Interactive world map
-- Inventory viewer
-- Item database
-- Real-time console logs
+### 🤖 Bot Actions
+| | Feature | Description |
+|---|---|---|
+| ✅ | Multi-bot support | Run and manage multiple bots at once |
+| ✅ | Bot movement + pathfinding | Automatic navigation across the world (A*) |
+| ✅ | Warp | Teleport to any world |
+| ✅ | Punch & place | Block interaction |
+| ✅ | Drop / trash item | Inventory management actions |
+| ✅ | Auto collect | Pick up dropped items automatically |
+| ✅ | Auto reconnect | Reconnects on disconnect |
 
----
+### 📜 Scripting
+| | Feature | Description |
+|---|---|---|
+| ✅ | Embedded Lua scripting | Automate anything with Lua 5.5 |
+| ✅ | Configurable delays | Tune timing for actions via script |
 
-## 🤖 Bot Functions
+### 🔐 Authentication & Network
+| | Feature | Description |
+|---|---|---|
+| ✅ | Legacy login | Username + password login |
+| ✅ | Session refresh | Keeps sessions alive automatically |
+| ✅ | Socks5 proxy | Route traffic through a proxy |
+| 🔲 | Google login | OAuth via growtopia-token |
+| 🔲 | Apple login | Apple ID authentication |
 
-- Multi Bot Support
-- Automatic Pathfinding
-- Warp Between Worlds
-- Punch Blocks
-- Place Blocks
-- Auto Collect
-- Drop Items
-- Trash Items
-- Auto Reconnect
-
----
-
-## 📜 Lua Scripting
-
-Automate repetitive tasks using the embedded Lua engine.
-
-Features include:
-
-- Custom scripts
-- Configurable delays
-- Automation logic
-- Event-based execution
-
----
-
-## 🔐 Authentication
-
-Current support includes:
-
-- Legacy Login
-- Automatic Session Refresh
-- SOCKS5 Proxy
-
-Planned:
-
-- Google Authentication
-- Apple Authentication
+### 📦 Data Management
+| | Feature | Description |
+|---|---|---|
+| ✅ | Item database | Searchable item reference |
+| ✅ | Inventory | View bot inventory |
+| ✅ | Growscan | World block scanning |
+| 🔲 | Auto-update | Fetch latest version & items.dat automatically |
 
 ---
 
-## 📦 Data Management
+## 🚀 Getting Started
 
-Included:
+### Prerequisites
 
-- Inventory Viewer
-- Item Database
-- World Scanner
+* [Rust](https://rustup.rs/) (Edition 2024 or newer)
+* [Bun](https://bun.sh/) (Fast all-in-one JavaScript runtime)
 
-Planned:
-
-- Automatic Updates
-- Online Item Database Sync
-
----
-
-# 🚀 Installation
-
-## Requirements
-
-Install:
-
-- Rust (Edition 2024)
-- Bun
-
----
-
-## Clone Repository
+### Installation
 
 ```bash
-git clone https://github.com/JansFrans/Jato.git
+# 1. Clone the repository
+git clone [https://github.com/JansFrans/Jato.git](https://github.com/JansFrans/Jato.git)
 cd Jato
-````
 
----
-
-## Build Web Assets
-
-```bash
+# 2. Build the web dashboard
 cd web
 bun install
 bun run build
 cd ..
-```
 
----
-
-## Compile
-
-```bash
+# 3. Compile the core framework
 cargo build --release
-```
-
----
-
-## Run
-
-```bash
-./target/release/Jato
-```
-
-Open your browser:
-
-```
-http://localhost:3000
-```
-
----
-
-# 📂 Project Structure
-
-```
-Jato
-│
-├── web/
-│   ├── src/
-│   ├── public/
-│   └── dist/
-│
-├── src/
-│
-├── stuff/
-│
-├── Cargo.toml
-│
-└── README.md
-```
-
----
-
-# 🛣 Roadmap
-
-* [x] Multi Bot
-* [x] Web Dashboard
-* [x] Inventory Viewer
-* [x] World Scanner
-* [x] Lua Support
-* [x] Proxy Support
-* [ ] Google Login
-* [ ] Apple Login
-* [ ] Auto Updater
-* [ ] Plugin System
-* [ ] Remote Dashboard
-* [ ] REST API
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-If you have ideas, improvements, or bug fixes, feel free to:
-
-* Open an Issue
-* Submit a Pull Request
-* Suggest New Features
-
----
-
-# 📜 License
-
-This project is licensed under the
-
-**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).**
-
-You are free to study and modify this project for personal and educational purposes.
-
-Commercial redistribution without permission is prohibited.
-
----
-
-<div align="center">
-
-Made with ❤️ using Rust
-
-**Jato**
-
-Created & Maintained by **Jans**
-
-https://github.com/JansFrans/Jato
-
-</div>
-```
